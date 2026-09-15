@@ -24,17 +24,6 @@ body {
    GLOBAL
    ========================= */
 
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.section {
-    padding: 100px 0;
-    border-top: 1px solid #1e293b;
-}
-
 h2 {
     font-size: 32px;
     margin-bottom: 40px;
@@ -50,6 +39,256 @@ h4 {
     font-weight: normal;
 }
 
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+    border-top: 1px solid #1e293b;
+}
+
+
+
+/* INICIO ABOUT ME */
+
+/* =========================
+   SOBRE MÍ
+   ========================= */
+
+.about-section {
+    min-height: 80vh;
+    padding: 100px 0;
+    box-sizing: border-box;
+
+    position: relative;
+    overflow: hidden;
+
+    border-top: 1px solid #1e293b;
+}
+
+
+/* =========================
+   FONDO ANIMADO
+   ========================= */
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        173deg,
+        #0b1120,
+        #1d4ed8,
+        #0ea5e9,
+        #38bdf8,
+        #1e40af
+    );
+
+    background-size: 300% 300%;
+
+    -webkit-mask-image: url("https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/nature-sprite.png");
+    mask-image: url("https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/nature-sprite.png");
+
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    animation: about-mask-out 0.7s steps(22) forwards;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   CONTENIDO
+   ========================= */
+
+.about-section .container {
+    position: relative;
+    z-index: 1;
+
+    width: 92%;
+    max-width: 1400px;
+}
+
+.about-content {
+    padding-top: 20px;
+}
+
+
+/* =========================
+   ETIQUETA
+   ========================= */
+
+.about-label {
+    display: block;
+
+    margin-bottom: 50px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #38bdf8;
+}
+
+
+/* =========================
+   INTERNAL
+   ========================= */
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+    gap: 80px;
+}
+
+
+/* =========================
+   TEXTO
+   ========================= */
+
+.about-text {
+    padding-top: 2rem;
+}
+
+.about-text h2 {
+    max-width: 900px;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 0.98;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.025em;
+
+    color: #fff;
+}
+
+.about-text h2 span {
+    display: block;
+    margin-top: 0.15em;
+
+    color: #8AB4F8;
+}
+
+
+
+.about-text p {
+    max-width: 600px;
+    margin-top: 35px;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   IMAGEN
+   ========================= */
+
+.about-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+    filter: blur(25px); /* CAMBIAR CUANDO TENGA IMG FINAL*/
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   ANIMACIÓN
+   ========================= */
+
+.about-section:hover::before {
+    animation: about-mask-in 0.7s steps(22) forwards;
+}
+
+@keyframes about-mask-in {
+
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+}
+
+@keyframes about-mask-out {
+
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-text h2 {
+        font-size: clamp(2.3rem, 9vw, 4rem);
+    }
+
+    .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+}
+
+/* FIN ABOUT ME */
+
+
 
 /* =========================
    HERO
@@ -64,6 +303,20 @@ h4 {
 
     text-align: center;
     padding: 40px 0;
+
+
+    background-image:
+    linear-gradient( 
+        90deg,
+        rgba(5, 8, 15, 0.92) 0%,
+        rgba(5, 8, 15, 0.78) 45%,
+        rgba(5, 8, 15, 0.55) 100%
+    ),
+    url("https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/imagen_fondo_burbujas.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .intro {
@@ -91,6 +344,32 @@ h4 {
     font-size: 20px;
 }
 
+.important_description {
+    font-family: 'Vollkorn', serif;
+    font-size: 32px;
+    line-height: 1.4;
+    color: #fafafa;
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    background-image: linear-gradient(
+        165deg,
+        #060e35,
+        #1e40af,
+        #0284c7
+    );
+
+    background-size: 100% 42%;
+    background-repeat: no-repeat;
+    background-position: 0 85%;
+
+    padding: 0 4px;
+    margin-left: -4px;
+}
+
+
+
 
 /* =========================
    BUTTONS
@@ -99,8 +378,9 @@ h4 {
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 20px;
     flex-wrap: wrap;
+    margin-top: 3.7rem;
 }
 
 .buttons a {
@@ -120,7 +400,190 @@ h4 {
 .buttons a:hover {
     background: #38bdf8;
     color: #0f172a;
+
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
 }
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #38bdf8;
+    }
+}
+
+
+/* ========================================
+   HERO SERVICES
+======================================== */
+
+.hero-services {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 4rem;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+    font-weight: 500;
+
+    text-align: left;
+}
+
+
+/* "Creo" y "para ti" */
+
+.hero-services__line {
+    color: #888;
+}
+
+
+/* Contenedor de la palabra animada */
+
+.hero-services__flip {
+    height: 1.15em;
+    overflow: hidden;
+}
+
+
+/* Lista animada */
+
+.hero-services__track {
+    display: flex;
+    flex-direction: column;
+
+    animation: heroServicesFlip 16s ease-in-out infinite;
+}
+
+
+/* Elementos */
+
+.hero-services__track span {
+    height: 1.15em;
+
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 0.08em 0.3em;
+
+    white-space: nowrap;
+
+    color: #fff;
+    font-weight: 500;
+    font-style: italic;
+
+    border-radius: 0.15em;
+
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   COLORES
+======================================== */
+
+.hero-services__track span:nth-child(1) {
+    background: #8AB4F8;
+}
+
+.hero-services__track span:nth-child(2) {
+    background: #9B8AFB;
+}
+
+.hero-services__track span:nth-child(3) {
+    background: #7DD3FC;
+}
+
+.hero-services__track span:nth-child(4) {
+    background: #7DD9B5;
+}
+
+.hero-services__track span:nth-child(5) {
+    background: #F5B97A;
+}
+
+.hero-services__track span:nth-child(6) {
+    background: #E7A0C4;
+}
+
+.hero-services__track span:nth-child(7) {
+    background: #8994F5;
+}
+
+.hero-services__track span:nth-child(8) {
+    background: #75D5C5;
+}
+
+
+/* ========================================
+   ANIMACIÓN
+======================================== */
+
+@keyframes heroServicesFlip {
+
+    0%,
+    9% {
+        transform: translateY(0);
+    }
+
+    12%,
+    21% {
+        transform: translateY(-1.15em);
+    }
+
+    24%,
+    33% {
+        transform: translateY(-2.30em);
+    }
+
+    36%,
+    45% {
+        transform: translateY(-3.45em);
+    }
+
+    48%,
+    57% {
+        transform: translateY(-4.60em);
+    }
+
+    60%,
+    69% {
+        transform: translateY(-5.75em);
+    }
+
+    72%,
+    81% {
+        transform: translateY(-6.90em);
+    }
+
+    84%,
+    93% {
+        transform: translateY(-8.05em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .hero-services {
+        margin-top: 3rem;
+        font-size: 2rem;
+    }
+
+}
+
+
+
 
 
 /* =========================
@@ -260,6 +723,10 @@ h4 {
     text-decoration: underline;
 }
 
+/* =========================
+   RESPONSIVE >>>
+   ========================= */
+
 
 /* =========================
    MOBILE
@@ -321,3 +788,82 @@ h4 {
         padding-left: 18px;
     }
 }
+
+
+
+
+/* =========================
+   EXTRA ANIMATIONS
+   ========================= */
+
+
+/* ANIMACION MAILTO */
+.mailto_animation {
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.mailto_animation::before {
+    content: "";
+    background: #094f6b;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    transform: scaleX(0);
+    animation: mailto-no-hover 1.4s forwards linear;
+    z-index: -1;
+}
+
+.mailto_animation:hover::before,
+.mailto_animation:focus::before {
+    animation: mailto-hover .5s forwards linear;
+}
+
+@keyframes mailto-hover {
+    0% {
+        transform: scaleX(0);
+        height: 5px;
+    }
+
+    45% {
+        transform: scaleX(1.05);
+        height: 5px;
+    }
+
+    55% {
+        height: 5px;
+    }
+
+    100% {
+        transform: scaleX(1.05);
+        height: 2.1rem;
+    }
+}
+
+@keyframes mailto-no-hover {
+    0% {
+        transform: scaleX(1.05);
+        height: 2.1rem;
+    }
+
+    45% {
+        height: 5px;
+    }
+
+    55% {
+        transform: scaleX(1.05);
+        height: 5px;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(0);
+        height: 5px;
+        opacity: .02;
+    }
+}
+/* FIN ANIMACION MAILTO */
