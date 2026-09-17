@@ -290,6 +290,590 @@ h4 {
 
 
 
+/*
+   PROYECTOS PERSONALES */
+
+
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+
+.projects-section {
+
+    --ratio: 257 / 364;
+
+    --t: 0.133333334s;
+
+    --min-card-width: 292px;
+
+    --radius: 0.5rem;
+
+    --border-size: 0.25rem;
+
+    --item-scale: 1;
+
+    --item-angle: 0deg;
+
+    width: 100%;
+
+    padding: 100px 30px;
+
+    perspective: 4000px;
+}
+
+
+/* ============================================================
+   PROPIEDADES CSS ANIMABLES
+   ============================================================ */
+
+@property --item-scale {
+
+    syntax: "<number>";
+
+    inherits: true;
+
+    initial-value: 1;
+}
+
+
+@property --item-angle {
+
+    syntax: "<angle>";
+
+    inherits: true;
+
+    initial-value: 0deg;
+}
+
+
+/* ============================================================
+   ANIMACIONES DE SCROLL
+   ============================================================ */
+
+
+/* Entrada de la carta */
+
+@keyframes shrink-top {
+
+    0% {
+
+        --item-scale: 0.5;
+
+        --item-angle: -60deg;
+
+        transform-origin: top;
+    }
+}
+
+
+/* Salida de la carta */
+
+@keyframes shrink-bottom {
+
+    0% {
+
+        --item-scale: 0.5;
+
+        --item-angle: 60deg;
+
+        transform-origin: bottom;
+    }
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.projects-section {
+
+    display: grid;
+
+    gap: 1.5rem;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(
+                var(--min-card-width),
+                1fr
+            )
+        );
+
+        padding-left: 6.5rem;
+}
+
+
+/* ============================================================
+   TÍTULO
+   ============================================================ */
+
+.projects-section > header {
+
+    grid-column: 1 / -1;
+}
+
+
+.projects-section > header h2 {
+
+    margin: 0;
+}
+
+
+/* ============================================================
+   CARTA
+   ============================================================ */
+
+.project-card {
+
+    /* Estado normal */
+
+    --item-scale: 1;
+
+    --item-angle: 0deg;
+
+
+    background-color:
+        var(--average-color);
+
+
+    border:
+        var(--border-size)
+        solid
+        var(--average-color);
+
+
+    border-radius:
+        var(--radius);
+
+
+    /* Sombra */
+
+    --shadow-color:
+        var(--average-color);
+
+    --shadow-distance:
+        var(--border-size);
+
+
+    box-shadow:
+
+        1px 1px var(--surface),
+
+        var(--shadow-distance)
+        var(--shadow-distance)
+        var(--shadow-color);
+
+    transform:
+
+        scale(
+            var(--item-scale)
+        )
+
+        rotateX(
+            var(--item-angle)
+        );
+
+
+    transform-style:
+        preserve-3d;
+
+
+    opacity:
+        min(
+            var(--item-scale),
+            0.8
+        );
+
+
+    will-change:
+        transform;
+
+
+    perspective:
+        1200px;
+
+
+    overflow:
+        hidden;
+}
+
+
+/* ============================================================
+   CONTENEDOR INTERNO
+   ============================================================ */
+
+.project-card-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    transform-style:
+        preserve-3d;
+
+
+    /* ransición del giro */
+
+    transition:
+        transform
+        0.7s
+        cubic-bezier(
+            .2,
+            .7,
+            .2,
+            1
+        );
+}
+
+
+/* ============================================================
+   GIRO AL PASAR EL RATÓN
+   ============================================================ */
+
+.project-card:hover
+.project-card-inner {
+
+    /* Giro hacia la izquierda */
+
+    transform:
+        rotateY(-180deg);
+}
+
+
+/* ============================================================
+   CARAS
+   ============================================================ */
+
+.project-card-front,
+.project-card-back {
+
+    width: 100%;
+
+    height: 100%;
+
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+}
+
+
+/* ============================================================
+   CARA DELANTERA
+   ============================================================ */
+
+.project-card-front {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   IMAGEN
+   ============================================================ */
+
+.project-card-front figure {
+
+    margin: 0;
+}
+
+
+.project-card-front img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio:
+        var(--ratio);
+
+    object-fit: cover;
+
+    border-radius:
+        calc(
+            var(--radius)
+            -
+            var(--border-size)
+        );
+}
+
+
+/* ============================================================
+   TÍTULO DE LA CARTA
+   ============================================================ */
+
+.project-card-front figcaption {
+
+    /* Espaciado */
+
+    margin:
+        1rem 1.1rem
+        1.2rem;
+
+
+    /* Tipografía */
+
+    font-size:
+        clamp(
+            0.9rem,
+            0.85rem + 0.15vw,
+            1rem
+        );
+
+    font-weight:
+        550;
+
+    line-height:
+        1.5;
+
+    letter-spacing:
+        0.06em;
+
+
+    /* Distribución del texto */
+
+    display:
+        -webkit-box;
+
+    -webkit-box-orient:
+        vertical;
+
+    overflow:
+        hidden;
+
+    word-break:
+        break-word;
+
+    text-wrap:
+        balance;
+
+
+    /* Evita que el texto quede pegado visualmente */
+
+    min-height:
+        calc(
+            2 * 1.4em
+        );
+}
+
+
+/* ============================================================
+   CARA TRASERA
+   ============================================================ */
+
+.project-card-back {
+
+    position: absolute;
+
+    inset: 0;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+
+    padding:
+        2rem;
+
+    background:
+        var(--average-color);
+
+
+    color:
+        white;
+
+    transform:
+        rotateY(180deg);
+
+    translate:
+        0 0 1px;
+}
+
+
+/* ============================================================
+   TÍTULO DE LA PARTE TRASERA
+   ============================================================ */
+
+.project-card-back h3 {
+
+    margin:
+        0 0 1rem;
+
+    font-size:
+        1.2rem;
+}
+
+
+/* ============================================================
+   DESCRIPCIÓN
+   ============================================================ */
+
+.project-card-back p {
+
+    margin:
+        0;
+
+    line-height:
+        1.6;
+
+    font-size:
+        0.9rem;
+}
+
+
+/* ============================================================
+   ANIMACIÓN CONTROLADA POR SCROLL
+   ============================================================ */
+
+@supports (animation-timeline: view()) {
+
+    .project-card {
+
+        animation:
+
+            shrink-top
+            both
+            ease-in-out,
+
+            shrink-bottom
+            both
+            ease-in-out
+            reverse;
+
+
+        animation-timeline:
+            view(block);
+
+
+        animation-range:
+
+            entry,
+
+            exit;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .projects-section {
+
+        --min-card-width:
+            160px;
+
+        padding:
+            80px 25px;
+    }
+}
+
+
+/* ============================================================
+   MÓVIL
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .projects-section {
+
+        --min-card-width:
+            135px;
+
+        padding:
+            70px 20px;
+
+        gap:
+            1rem;
+    }
+
+
+    .project-card-front figcaption {
+
+        font-size:
+            0.8rem;
+    }
+
+
+    .project-card-back {
+
+        padding:
+            1.25rem;
+    }
+
+
+    .project-card-back h3 {
+
+        font-size:
+            1rem;
+
+        margin-bottom:
+            0.75rem;
+    }
+
+
+    .project-card-back p {
+
+        font-size:
+            0.8rem;
+
+        line-height:
+            1.4;
+    }
+}
+
+
+/* ============================================================
+   REDUCIR MOVIMIENTO
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-card {
+
+        animation:
+            none;
+
+        --item-scale:
+            1;
+
+        --item-angle:
+            0deg;
+
+        transform:
+            scale(1)
+            rotateX(0deg);
+    }
+
+
+    .project-card-inner {
+
+        transition:
+            none;
+    }
+}
+
+
+/* FIN PROYECTOS PERSONALES */
+
+
+
 /* =========================
    HERO
    ========================= */
