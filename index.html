@@ -1,1495 +1,764 @@
-/* =========================
-   RESET
-   ========================= */
+<!DOCTYPE html>
+<html lang="es">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html {
-    scroll-behavior: smooth;
-}
+    <title>Iker Gorostiaga | Desarrollador</title>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
-    color: #ffffff;
-    line-height: 1.6;
-}
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5339/5339159.png">
 
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-/* =========================
-   GLOBAL
-   ========================= */
+<body>
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #ffffff;
-}
+    <main>
 
-h3 {
-    color: #ffffff;
-}
+       
+        <!-- HERO -->
+        <section class="hero">
 
-h4 {
-    color: #38bdf8;
-    font-weight: normal;
-}
+            <div class="container">
 
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-}
+                <p class="intro">Hola, soy</p>
 
-.section {
-    padding: 100px 0;
-    border-top: 1px solid #1e293b;
-}
+                <h1>
+                    Iker <span>Gorostiaga</span>
+                </h1>
 
+                <span class="important_description">
+                    Desarrollador Full Stack con experiencia en desarrollo web, backend, APIs, datos e infraestructura digital.
+                </span>
 
+                <div class="buttons">
+                    <a href="https://github.com/IkerGorostiagala-dev">
+                        <span>GitHub</span>
+                    </a>
 
-/* INICIO ABOUT ME */
+                    <a href="https://www.linkedin.com/in/iker-gorostiaga-552794401/">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
 
-/* =========================
-   SOBRE MÍ
-   ========================= */
+                <!-- SERVICIOS DINÁMICOS -->
+                <div class="hero-services">
 
-.about-section {
-    min-height: 80vh;
-    padding: 100px 0;
-    box-sizing: border-box;
+                    <span class="hero-services__line">
+                        Me especializo en
+                    </span>
 
-    position: relative;
-    overflow: hidden;
+                    <div class="hero-services__flip">
+                        <div class="hero-services__track">
+                            <span>desarrollo web</span>
+                            <span>integración de APIs</span>
+                            <span>sistemas backend</span>
+                            <span>gestión de datos</span>
+                            <span>infraestructura cloud</span>
+                            <span>contenedores Docker</span>
+                            <span>automatización</span>
+                            <span>sistemas y redes</span>
+                        </div>
 
-    border-top: 1px solid #1e293b;
-}
+                    </div>
 
 
-/* =========================
-   FONDO ANIMADO
-   ========================= */
+                </div>
 
-.about-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+            </div>
 
-    background: linear-gradient(
-        173deg,
-        #0b1120,
-        #1d4ed8,
-        #0ea5e9,
-        #38bdf8,
-        #1e40af
-    );
+        </section>
 
-    background-size: 300% 300%;
 
-    -webkit-mask-image: url("https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/nature-sprite.png");
-    mask-image: url("https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/nature-sprite.png");
 
-    -webkit-mask-size: 2300% 100%;
-    mask-size: 2300% 100%;
 
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
 
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+        <!-- SOBRE MÍ -->
+        <section class="section about-section">
 
-    animation: about-mask-out 0.7s steps(22) forwards;
+            <div class="container about-content">
 
-    z-index: 0;
-}
+                <span class="about-label">SOBRE MÍ</span>
 
+                <div class="about-intro">
 
-/* =========================
-   CONTENIDO
-   ========================= */
+                    <div class="about-text">
 
-.about-section .container {
-    position: relative;
-    z-index: 1;
+                        <h2>
+                            ❝ La innovación es el primer paso.
+                            <span>La tecnología, el camino para hacerla realidad. ❞</span>
+                        </h2>
 
-    width: 92%;
-    max-width: 1400px;
-}
+                        <p>
+                            Soy desarrollador Full Stack y me interesa entender cómo funcionan las cosas, 
+                            encontrar formas de mejorarlas y construir soluciones que sean útiles, eficientes y fáciles de mantener.
+                        </p>
 
-.about-content {
-    padding-top: 20px;
-}
 
+                    </div>
 
-/* =========================
-   ETIQUETA
-   ========================= */
+                    <div class="about-image">
+                        <!-- CAMBIAR CUANDO TENGA FOTO FINAL -->
+                        <img
+                            src="https://i.pinimg.com/736x/c4/d0/e4/c4d0e459b5becf9b1c754fe3eeaf5911.jpg" 
+                            alt="Iker Gorostiaga"
+                        >
+                    </div>
 
-.about-label {
-    display: block;
+                </div>
 
-    margin-bottom: 50px;
+            </div>
 
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 3px;
+        </section>
 
-    color: #38bdf8;
-}
 
+       <!-- MIS PROYECTOS PERSONALES -->
 
-/* =========================
-   INTERNAL
-   ========================= */
+    
+        <section class="projects-section">
 
-.about-intro {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+            <h1>Proyectos personales</h1>
 
-    align-items: center;
-    gap: 80px;
-}
+            <header>
+                <h2> · Inteligencia artificial:</h2>
+            </header>
 
+            <article
+                class="project-card"
+                style="--average-color: #263238"
+            >
 
-/* =========================
-   TEXTO
-   ========================= */
+                <div class="project-card-inner">
 
-.about-text {
-    padding-top: 2rem;
-}
+                    <!-- CARA DELANTERA -->
+                    <div class="project-card-front">
 
-.about-text h2 {
-    max-width: 900px;
-    margin: 0;
+                        <figure>
 
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(2.8rem, 5vw, 5rem);
-    line-height: 0.98;
-    font-weight: 500;
-    font-style: italic;
-    letter-spacing: 0.025em;
+                            <img
+                                src="https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/pp_img_modeloG5.png"
+                                alt="Detección y clasificación de daños en carreteras"
+                            >
 
-    color: #fff;
-}
+                            <figcaption>
+                                Detección y clasificación de daños en carreteras.
+                            </figcaption>
 
-.about-text h2 span {
-    display: block;
-    margin-top: 0.15em;
+                        </figure>
 
-    color: #8AB4F8;
-}
+                    </div>
 
 
+                    <!-- CARA TRASERA -->
+                    <div class="project-card-back">
 
-.about-text p {
-    max-width: 600px;
-    margin-top: 35px;
+                    <h3>
+                        Detección y clasificación de daños en carreteras.
+                    </h3>
 
-    font-size: 1.1rem;
-    line-height: 1.7;
+                    <p>
+                        Modelo de inteligencia artificial capaz de
+                        <strong>detectar y clasificar diferentes tipos de daños en carreteras</strong>
+                        a partir de imágenes. Los datos se procesaban mediante un
+                        <strong>pipeline con Kafka y Airflow</strong>, integrando
+                        <strong>AWS API Gateway y DynamoDB</strong> para almacenar y organizar
+                        los resultados por <strong>tramo geográfico y tipo de daño</strong>.
+                    </p>
 
-    color: #cbd5e1;
-}
+                    </div>
 
+                </div>
 
-/* =========================
-   IMAGEN
-   ========================= */
+            </article>
 
-.about-image {
-    width: 100%;
-    aspect-ratio: 4 / 5;
+            <article
+                class="project-card"
+                style="--average-color: #37474f"
+            >
 
-    overflow: hidden;
-    border-radius: 12px;
-}
+                <div class="project-card-inner">
 
-.about-image img {
-    display: block;
+                    <!-- CARA DELANTERA -->
+                    <div class="project-card-front">
 
-    width: 100%;
-    height: 100%;
+                        <figure>
 
-    object-fit: cover;
+                            <img
+                                src="https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/yolo-card.jpg"
+                                alt="Modelos de inteligencia artificial locales"
+                            >
 
-    transition: transform 0.5s ease;
+                            <figcaption>
+                                Modelos de IA locales.
+                            </figcaption>
 
-    filter: blur(25px); /* CAMBIAR CUANDO TENGA IMG FINAL*/
-}
+                        </figure>
 
-.about-image:hover img {
-    transform: scale(1.04);
-}
+                    </div>
 
 
-/* =========================
-   ANIMACIÓN
-   ========================= */
+                    <!-- CARA TRASERA -->
+                    <div class="project-card-back">
 
-.about-section:hover::before {
-    animation: about-mask-in 0.7s steps(22) forwards;
-}
+                    <h3>
+                        Modelos de IA locales.
+                    </h3>
 
-@keyframes about-mask-in {
+                    <p>
+                        Desarrollo y <strong>entrenamiento de modelos de inteligencia artificial
+                        ejecutados localmente</strong>, trabajando con <strong>YOLO</strong> para la
+                        detección y clasificación de objetos. Experimentación con diferentes
+                        conjuntos de datos, <strong>parámetros y configuraciones de entrenamiento
+                        para mejorar la precisión de los modelos</strong>, además de su aplicación
+                        en <strong>chatbots y reconocimiento de números y caracteres</strong>
+                        mediante herramientas como <strong>Ollama y YOLO</strong>.
+                    </p>
 
-    from {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
+                    </div>
 
-    to {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
+                </div>
 
-}
+            </article>
 
-@keyframes about-mask-out {
+            <article
+                class="project-card"
+                style="--average-color: #455a64"
+            >
 
-    from {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
+                <div class="project-card-inner">
 
-    to {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
+                    <!-- CARA DELANTERA -->
+                    <div class="project-card-front">
 
-}
+                        <figure>
 
+                            <img
+                                src="https://static.vecteezy.com/system/resources/thumbnails/026/309/247/small/robot-chat-or-chat-bot-logo-modern-conversation-automatic-technology-logo-design-template-vector.jpg"
+                                alt="Modelos de inteligencia artificial en la nube"
+                            >
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+                            <figcaption>
+                                Modelos de IA en la nube.
+                            </figcaption>
 
-@media (max-width: 768px) {
+                        </figure>
 
-    .about-intro {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
+                    </div>
 
-    .about-text h2 {
-        font-size: clamp(2.3rem, 9vw, 4rem);
-    }
 
-    .about-image {
-        max-width: 500px;
-        margin: 0 auto;
-    }
+                    <!-- CARA TRASERA -->
+                    <div class="project-card-back">
 
-}
+                    <h3>
+                        Modelos de IA en la nube.
+                    </h3>
 
-/* FIN ABOUT ME */
+                    <p>
+                        Desarrollo e integración de <strong>chatbots mediante APIs y plataformas cloud
+                        como Hugging Face</strong>, trabajando con <strong>diferentes modelos y
+                        configuraciones</strong>. Diseño de <strong>personalidades y contextos
+                        específicos</strong> para adaptar el comportamiento de los asistentes,
+                        junto con la <strong>gestión del consumo de tokens</strong> y las
+                        interacciones según las necesidades de cada aplicación.
+                    </p>
 
+                    </div>
 
+                </div>
 
-/*
-   PROYECTOS PERSONALES */
+            </article>
 
 
-/* ============================================================
-   VARIABLES
-   ============================================================ */
+            <header>
+                <h2> · Desarrollo web:</h2>
+            </header>
 
-.projects-section {
+            <article
+                class="project-card"
+                style="--average-color: #263238"
+            >
 
-    --ratio: 257 / 364;
+                <div class="project-card-inner">
 
-    --t: 0.133333334s;
+                    <!-- CARA DELANTERA -->
+                    <div class="project-card-front">
 
-    --min-card-width: 292px;
+                        <figure>
 
-    --radius: 0.5rem;
+                            <img
+                                src="https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/DF_camaras_DW_card.png"
+                                alt="Detección y clasificación de daños en carreteras"
+                            >
 
-    --border-size: 0.25rem;
+                            <figcaption>
+                                 Cámaras de tráfico y estado de las carreteras.
+                            </figcaption>
 
-    --item-scale: 1;
+                        </figure>
 
-    --item-angle: 0deg;
+                    </div>
 
-    width: 100%;
 
-    padding: 100px 30px;
+                    <!-- CARA TRASERA -->
+                    <div class="project-card-back">
 
-    perspective: 4000px;
-}
+                    <h3>
+                        Cámaras de tráfico y estado de las carreteras.
+                    </h3>
 
+                    <p>
+                        Desarrollo de una aplicación para consultar en tiempo real las
+                        <strong>cámaras de tráfico públicas de la Diputación Foral de Bizkaia</strong>.
+                        Integración con su <strong>API de incidencias en carretera</strong> para
+                        mostrar información sobre <strong>accidentes, cortes y otras incidencias</strong>,
+                        centralizando los datos en una interfaz web para facilitar la consulta del
+                        <strong>estado de las carreteras</strong>.
+                    </p>
 
-/* ============================================================
-   PROPIEDADES CSS ANIMABLES
-   ============================================================ */
+                    </div>
 
-@property --item-scale {
+                </div>
 
-    syntax: "<number>";
+            </article>
 
-    inherits: true;
 
-    initial-value: 1;
-}
+                        <article
+                class="project-card"
+                style="--average-color: #263238"
+            >
 
+                <div class="project-card-inner">
 
-@property --item-angle {
+                    <!-- CARA DELANTERA -->
+                    <div class="project-card-front">
 
-    syntax: "<angle>";
+                        <figure>
 
-    inherits: true;
+                            <img
+                                src="https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/Proyecto_Personal_DW_card.png"
+                                alt="Detección y clasificación de daños en carreteras"
+                            >
 
-    initial-value: 0deg;
-}
+                            <figcaption>
+                                  Experiencia interactiva y UI inspirada en la saga Alien.
+                            </figcaption>
 
+                        </figure>
 
-/* ============================================================
-   ANIMACIONES DE SCROLL
-   ============================================================ */
+                    </div>
 
 
-/* Entrada de la carta */
+                    <!-- CARA TRASERA -->
+                    <div class="project-card-back">
 
-@keyframes shrink-top {
+                    <h3>
+                         Experiencia interactiva y UI inspirada en la saga Alien.
+                    </h3>
 
-    0% {
+                    <p>
+                        Desarrollo de una <strong>experiencia interactiva inspirada en Alien:
+                        Isolation</strong>, diseñada como un escape room basado en una
+                        <strong>terminal de estilo Linux</strong>. El usuario debía acceder
+                        mediante <strong>credenciales y resolver diferentes minijuegos</strong>
+                        para avanzar por el sistema de la nave, incorporando <strong>sonidos,
+                        efectos e interfaces inspiradas en la estética de ciencia ficción</strong>
+                        para crear una experiencia inmersiva.
+                    </p>
 
-        --item-scale: 0.5;
+                    </div>
 
-        --item-angle: -60deg;
+                </div>
 
-        transform-origin: top;
-    }
-}
+            </article>
 
 
-/* Salida de la carta */
+            <header>
+                <h2>· Desarrollo multiplataforma:</h2>
+            </header>
 
-@keyframes shrink-bottom {
+            <article
+                class="project-card"
+                style="--average-color: #263238"
+            >
 
-    0% {
+                <div class="project-card-inner">
 
-        --item-scale: 0.5;
+                    <!-- CARA DELANTERA -->
+                    <div class="project-card-front">
 
-        --item-angle: 60deg;
+                        <figure>
 
-        transform-origin: bottom;
-    }
-}
+                            <img
+                                src="https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/Proyecto_Bermeo_DW_card.png"
+                                alt="Detección y clasificación de daños en carreteras"
+                            >
 
+                            <figcaption>
+                                 Aplicación educativa de Bermeo.
+                            </figcaption>
 
-/* ============================================================
-   GRID
-   ============================================================ */
+                        </figure>
 
-.projects-section {
+                    </div>
 
-    display: grid;
 
-    gap: 1.5rem;
+                    <!-- CARA TRASERA -->
+                    <div class="project-card-back">
 
-    grid-template-columns:
-        repeat(
-            auto-fill,
-            minmax(
-                var(--min-card-width),
-                1fr
-            )
-        );
+                    <h3>
+                        Aplicación educativa de Bermeo.
+                    </h3>
 
-        padding-left: 6.5rem;
-}
+                    <p>
+                        Desarrollo de una <strong>app educativa para niños</strong> basada en
+                        la exploración de diferentes puntos de interés. Mediante
+                        <strong>Google Maps</strong>, los usuarios podían desplazarse hasta
+                        distintas ubicaciones y <strong>desbloquear minijuegos y contenidos
+                        interactivos</strong> al llegar a cada punto, creando una experiencia
+                        similar a la de una <strong>visita interactiva a un museo</strong>.
+                    </p>
 
+                    </div>
 
-/* ============================================================
-   TÍTULO
-   ============================================================ */
+                </div>
 
-.projects-section > header {
+            </article>
 
-    grid-column: 1 / -1;
-}
 
+        </section>
 
-.projects-section > header h2 {
 
-    margin: 0;
-}
 
+        <!-- EXPERIENCIA -->
+        <section class="section">
 
-/* ============================================================
-   CARTA
-   ============================================================ */
+            <div class="container">
 
-.project-card {
+                <h2>Experiencia</h2>
 
-    /* Estado normal */
 
-    --item-scale: 1;
+                <article class="experience">
 
-    --item-angle: 0deg;
+                    <span class="date">2025 — 2026</span>
 
+                    <h3>Desarrollador Full Stack</h3>
 
-    background-color:
-        var(--average-color);
+                    <h4>Ventijet Health Technology, SL</h4>
 
+                    <p>
+                        Desarrollo de una interfaz médica utilizando
+                        tecnologías web y JavaScript.
+                        Integración del frontend con servicios backend
+                        mediante APIs REST desarrolladas con FastAPI.
+                        Gestión del entorno y despliegue mediante Docker.
+                    </p>
 
-    border:
-        var(--border-size)
-        solid
-        var(--average-color);
+                </article>
 
 
-    border-radius:
-        var(--radius);
+                <article class="experience">
 
+                    <span class="date">2024 — 2025</span>
 
-    /* Sombra */
+                    <h3>Desarrollador Web</h3>
 
-    --shadow-color:
-        var(--average-color);
+                    <h4>Seotek Marketing Digital, SL</h4>
 
-    --shadow-distance:
-        var(--border-size);
+                    <p>
+                        Diseño y desarrollo de páginas web personalizadas
+                        utilizando WordPress, trabajando conjuntamente
+                        con diseño gráfico, fotografía y creación de contenido.
+                    </p>
 
+                </article>
 
-    box-shadow:
 
-        1px 1px var(--surface),
+                <article class="experience">
 
-        var(--shadow-distance)
-        var(--shadow-distance)
-        var(--shadow-color);
+                    <span class="date">2023 — 2024</span>
 
-    transform:
+                    <h3>Analista de Datos</h3>
 
-        scale(
-            var(--item-scale)
-        )
+                    <h4>Inetum Norte Sociedad Limitada</h4>
 
-        rotateX(
-            var(--item-angle)
-        );
+                    <p>
+                        Gestión de pipelines de ingesta de datos para Power BI,
+                        consultas SQL y creación de informes.
+                        Elaboración y gestión de documentación técnica
+                        en entornos Microsoft.
+                    </p>
 
+                </article>
 
-    transform-style:
-        preserve-3d;
 
+                <article class="experience">
 
-    opacity:
-        min(
-            var(--item-scale),
-            0.8
-        );
+                    <span class="date">2022</span>
 
+                    <h3>Desarrollador Web y Técnico de Redes</h3>
 
-    will-change:
-        transform;
+                    <h4>Databilbo S.L</h4>
 
+                    <p>
+                        Instalación y administración de redes LAN,
+                        gestión de switches y desarrollo de páginas web.
+                    </p>
 
-    perspective:
-        1200px;
+                </article>
 
+            </div>
 
-    overflow:
-        hidden;
-}
+        </section>
 
 
-/* ============================================================
-   CONTENEDOR INTERNO
-   ============================================================ */
+        <!-- TECNOLOGÍAS -->
+        <section class="section">
 
-.project-card-inner {
+            <div class="container">
 
-    position: relative;
+                <h2>Tecnologías</h2>
 
-    width: 100%;
 
-    height: 100%;
+                <div class="skills">
 
-    transform-style:
-        preserve-3d;
+                    <div class="skill-group">
+                        <h3>Desarrollo</h3>
 
+                        <p>
+                            JavaScript · Python · Java · PHP · HTML · CSS
+                        </p>
+                    </div>
 
-    /* ransición del giro */
 
-    transition:
-        transform
-        0.7s
-        cubic-bezier(
-            .2,
-            .7,
-            .2,
-            1
-        );
-}
+                    <div class="skill-group">
+                        <h3>Backend & Datos</h3>
 
+                        <p>
+                            FastAPI · MySQL · Firebase · SQL · REST API
+                        </p>
+                    </div>
 
-/* ============================================================
-   GIRO AL PASAR EL RATÓN
-   ============================================================ */
 
-.project-card:hover
-.project-card-inner {
+                    <div class="skill-group">
+                        <h3>Cloud & DevOps</h3>
 
-    /* Giro hacia la izquierda */
+                        <p>
+                            AWS · Docker · Terraform · CloudWatch · API Gateway · S3
+                        </p>
+                    </div>
 
-    transform:
-        rotateY(-180deg);
-}
 
+                    <div class="skill-group">
+                        <h3>Sistemas & Monitorización</h3>
 
-/* ============================================================
-   CARAS
-   ============================================================ */
+                        <p>
+                            Linux · Windows · ELK Stack · Grafana · InfluxDB
+                        </p>
+                    </div>
 
-.project-card-front,
-.project-card-back {
+                </div>
 
-    width: 100%;
+            </div>
 
-    height: 100%;
+        </section>
 
 
-    backface-visibility:
-        hidden;
+        <!-- FORMACIÓN -->
+        <section class="section">
 
-    -webkit-backface-visibility:
-        hidden;
-}
+            <div class="container">
 
+                <h2>Formación</h2>
 
-/* ============================================================
-   CARA DELANTERA
-   ============================================================ */
 
-.project-card-front {
+                <article class="education">
 
-    position: relative;
+                    <span class="date">2025 — 2026</span>
 
-    z-index: 2;
-}
+                    <h3>
+                        Especialización en Inteligencia Artificial y Big Data
+                    </h3>
 
+                    <h4>Somorrostro</h4>
 
-/* ============================================================
-   IMAGEN
-   ============================================================ */
+                    <p>
+                        Inteligencia artificial, gestión de datos,
+                        ingesta, limpieza y transformación de datos.
+                    </p>
 
-.project-card-front figure {
+                </article>
 
-    margin: 0;
-}
 
+                <article class="education">
 
-.project-card-front img {
+                    <span class="date">2024 — 2025</span>
 
-    display: block;
+                    <h3>
+                        Técnico Superior en Desarrollo de Aplicaciones Web
+                    </h3>
 
-    width: 100%;
+                    <h4>CPES CEINMARK BHIP</h4>
 
-    height: auto;
+                    <p>
+                        HTML, CSS, JavaScript, PHP, MySQL y desarrollo
+                        de sitios web responsivos.
+                    </p>
 
-    aspect-ratio:
-        var(--ratio);
+                </article>
 
-    object-fit: cover;
 
-    border-radius:
-        calc(
-            var(--radius)
-            -
-            var(--border-size)
-        );
-}
+                <article class="education">
 
+                    <span class="date">2022 — 2024</span>
 
-/* ============================================================
-   TÍTULO DE LA CARTA
-   ============================================================ */
+                    <h3>
+                        Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
+                    </h3>
 
-.project-card-front figcaption {
+                    <h4>CIFP Elorrieta Erreka Mari LHII</h4>
 
-    /* Espaciado */
+                    <p>
+                        Desarrollo de aplicaciones web, móviles y de escritorio,
+                        bases de datos y sistemas cliente-servidor.
+                    </p>
 
-    margin:
-        1rem 1.1rem
-        1.2rem;
+                </article>
 
 
-    /* Tipografía */
+                <article class="education">
 
-    font-size:
-        clamp(
-            0.9rem,
-            0.85rem + 0.15vw,
-            1rem
-        );
+                    <span class="date">2020 — 2022</span>
 
-    font-weight:
-        550;
+                    <h3>
+                        Técnico en Sistemas Microinformáticos y Redes
+                    </h3>
 
-    line-height:
-        1.5;
+                    <h4>CPIFP Harrobia LHII</h4>
 
-    letter-spacing:
-        0.06em;
+                    <p>
+                        Sistemas, redes, hardware, servidores Linux y Windows
+                        y administración de sistemas.
+                    </p>
 
+                </article>
 
-    /* Distribución del texto */
+            </div>
 
-    display:
-        -webkit-box;
+        </section>
 
-    -webkit-box-orient:
-        vertical;
 
-    overflow:
-        hidden;
+        <!-- CERTIFICACIONES -->
+        <section class="section">
 
-    word-break:
-        break-word;
+            <div class="container">
 
-    text-wrap:
-        balance;
+                <h2>Formación adicional</h2>
 
+                <div class="certifications">
 
-    /* Evita que el texto quede pegado visualmente */
+                    <p>Google — IA y productividad</p>
 
-    min-height:
-        calc(
-            2 * 1.4em
-        );
-}
+                    <p>Python — Fundamentals</p>
 
+                    <p>Business English — Santander Open Academy</p>
 
-/* ============================================================
-   CARA TRASERA
-   ============================================================ */
+                    <p>Prompting responsable — Santander Open Academy</p>
 
-.project-card-back {
+                    <p>Gemini — Inteligencia Artificial</p>
 
-    position: absolute;
+                </div>
 
-    inset: 0;
+            </div>
 
+        </section>
 
-    display: flex;
 
-    flex-direction: column;
+        <!-- OTROS -->
+        <section class="section">
 
-    justify-content: center;
+            <div class="container">
 
-    align-items: flex-start;
+                <h2>Otros</h2>
 
+                <div class="skills">
 
-    padding:
-        2rem;
+                    <div class="skill-group">
+                        <h3>Idiomas</h3>
 
-    background:
-        var(--average-color);
+                        <p>
+                            Español · Euskera B1 · Inglés A2
+                        </p>
+                    </div>
 
 
-    color:
-        white;
+                    <div class="skill-group">
+                        <h3>Competencias</h3>
 
-    transform:
-        rotateY(180deg);
+                        <p>
+                            Documentación técnica · Redes LAN ·
+                            Administración de sistemas · Trabajo multidisciplinar
+                        </p>
+                    </div>
 
-    translate:
-        0 0 1px;
-}
 
+                    <div class="skill-group">
+                        <h3>Otros</h3>
 
-/* ============================================================
-   TÍTULO DE LA PARTE TRASERA
-   ============================================================ */
+                        <p>
+                            Carnet de conducir B
+                        </p>
+                    </div>
 
-.project-card-back h3 {
+                </div>
 
-    margin:
-        0 0 1rem;
+            </div>
 
-    font-size:
-        1.2rem;
-}
+        </section>
 
 
-/* ============================================================
-   DESCRIPCIÓN
-   ============================================================ */
+        <!-- CONTACTO -->
+        <section class="section contact">
 
-.project-card-back p {
+            <div class="container">
 
-    margin:
-        0;
+                <h2>Contacto</h2>
 
-    line-height:
-        1.6;
+                <p>
+                    ¿Tienes un proyecto o quieres ponerte en contacto conmigo?
+                </p>
 
-    font-size:
-        0.9rem;
-}
+                <a
+                    class="email mailto_animation"
+                    href="mailto:iker.gorostiagala04@gmail.com"
+                >
+                    iker.gorostiagala04@gmail.com
+                </a>
 
 
-/* ============================================================
-   ANIMACIÓN CONTROLADA POR SCROLL
-   ============================================================ */
+            </div>
 
-@supports (animation-timeline: view()) {
+        </section>
 
-    .project-card {
+    </main>
 
-        animation:
 
-            shrink-top
-            both
-            ease-in-out,
+    <!-- FELICETTE -->
 
-            shrink-bottom
-            both
-            ease-in-out
-            reverse;
+    <img
+        src="https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/Felicette.jpg"
+        alt="Felicette"
+        style="
+            position: fixed;
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            left: 15px;
+            bottom: 15px;
+            border-radius: 15%;
+        "
+    >
 
+</body>
 
-        animation-timeline:
-            view(block);
-
-
-        animation-range:
-
-            entry,
-
-            exit;
-    }
-}
-
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-@media (max-width: 900px) {
-
-    .projects-section {
-
-        --min-card-width:
-            160px;
-
-        padding:
-            80px 25px;
-    }
-}
-
-
-/* ============================================================
-   MÓVIL
-   ============================================================ */
-
-@media (max-width: 600px) {
-
-    .projects-section {
-
-        --min-card-width:
-            135px;
-
-        padding:
-            70px 20px;
-
-        gap:
-            1rem;
-    }
-
-
-    /* Título de la cara delantera */
-
-    .project-card-front figcaption {
-
-        font-size:
-            clamp(0.65rem, 2.5vw, 0.8rem);
-
-        line-height:
-            1.3;
-
-        margin:
-            0.6rem;
-    }
-
-
-    /* Cara trasera */
-
-    .project-card-back {
-
-        padding:
-            0.6rem;
-
-        justify-content:
-            center;
-
-        overflow:
-            hidden;
-    }
-
-
-    /* Título trasero */
-
-    .project-card-back h3 {
-
-        font-size:
-            clamp(0.65rem, 2.5vw, 0.85rem);
-
-        line-height:
-            1.25;
-
-        margin:
-            0 0 0.4rem;
-
-        overflow-wrap:
-            anywhere;
-    }
-
-
-    /* Descripción trasera */
-
-    .project-card-back p {
-
-        font-size:
-            clamp(0.55rem, 2.1vw, 0.7rem);
-
-        line-height:
-            1.3;
-
-        margin:
-            0;
-
-        overflow-wrap:
-            anywhere;
-    }
-
-
-    /* Evita que palabras largas desborden */
-
-    .project-card-back strong {
-
-        overflow-wrap:
-            anywhere;
-    }
-
-}
-
-
-/* ============================================================
-   REDUCIR MOVIMIENTO
-   ============================================================ */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .project-card {
-
-        animation:
-            none;
-
-        --item-scale:
-            1;
-
-        --item-angle:
-            0deg;
-
-        transform:
-            scale(1)
-            rotateX(0deg);
-    }
-
-
-    .project-card-inner {
-
-        transition:
-            none;
-    }
-}
-
-
-/* FIN PROYECTOS PERSONALES */
-
-
-
-/* =========================
-   HERO
-   ========================= */
-
-.hero {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    padding: 40px 0;
-
-
-    background-image:
-    linear-gradient( 
-        90deg,
-        rgba(5, 8, 15, 0.92) 0%,
-        rgba(5, 8, 15, 0.78) 45%,
-        rgba(5, 8, 15, 0.55) 100%
-    ),
-    url("https://raw.githubusercontent.com/IkerGorostiagala-dev/portfolio/refs/heads/main/images/imagen_fondo_burbujas.avif");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.intro {
-    color: #94a3b8;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.hero h1 {
-    font-size: clamp(45px, 8vw, 72px);
-    line-height: 1.1;
-    letter-spacing: -2px;
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    color: #38bdf8;
-}
-
-.description {
-    max-width: 650px;
-    margin: 0 auto 35px;
-
-    color: #94a3b8;
-    font-size: 20px;
-}
-
-.important_description {
-    font-family: 'Vollkorn', serif;
-    font-size: 32px;
-    line-height: 1.4;
-    color: #fafafa;
-
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-
-    background-image: linear-gradient(
-        165deg,
-        #060e35,
-        #1e40af,
-        #0284c7
-    );
-
-    background-size: 100% 42%;
-    background-repeat: no-repeat;
-    background-position: 0 85%;
-
-    padding: 0 4px;
-    margin-left: -4px;
-}
-
-
-
-
-/* =========================
-   BUTTONS
-   ========================= */
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 3.7rem;
-}
-
-.buttons a {
-    display: inline-block;
-
-    padding: 11px 22px;
-
-    border: 1px solid #38bdf8;
-    border-radius: 6px;
-
-    color: #38bdf8;
-    text-decoration: none;
-
-    transition: 0.2s ease;
-}
-
-.buttons a:hover {
-    background: #38bdf8;
-    color: #0f172a;
-
-    animation: pulse 1s;
-    box-shadow: 0 0 0 2em transparent;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 #38bdf8;
-    }
-}
-
-
-/* ========================================
-   HERO SERVICES
-======================================== */
-
-.hero-services {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    margin-top: 4rem;
-
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    line-height: 1;
-    font-weight: 500;
-
-    text-align: left;
-}
-
-
-/* "Creo" y "para ti" */
-
-.hero-services__line {
-    color: #888;
-}
-
-
-/* Contenedor de la palabra animada */
-
-.hero-services__flip {
-    height: 1.15em;
-    overflow: hidden;
-}
-
-
-/* Lista animada */
-
-.hero-services__track {
-    display: flex;
-    flex-direction: column;
-
-    animation: heroServicesFlip 16s ease-in-out infinite;
-}
-
-
-/* Elementos */
-
-.hero-services__track span {
-    height: 1.15em;
-
-    display: flex;
-    align-items: center;
-
-    width: fit-content;
-
-    padding: 0.08em 0.3em;
-
-    white-space: nowrap;
-
-    color: #fff;
-    font-weight: 500;
-    font-style: italic;
-
-    border-radius: 0.15em;
-
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ========================================
-   COLORES
-======================================== */
-
-.hero-services__track span:nth-child(1) {
-    background: #8AB4F8;
-}
-
-.hero-services__track span:nth-child(2) {
-    background: #9B8AFB;
-}
-
-.hero-services__track span:nth-child(3) {
-    background: #7DD3FC;
-}
-
-.hero-services__track span:nth-child(4) {
-    background: #7DD9B5;
-}
-
-.hero-services__track span:nth-child(5) {
-    background: #F5B97A;
-}
-
-.hero-services__track span:nth-child(6) {
-    background: #E7A0C4;
-}
-
-.hero-services__track span:nth-child(7) {
-    background: #8994F5;
-}
-
-.hero-services__track span:nth-child(8) {
-    background: #75D5C5;
-}
-
-
-/* ========================================
-   ANIMACIÓN
-======================================== */
-
-@keyframes heroServicesFlip {
-
-    0%,
-    9% {
-        transform: translateY(0);
-    }
-
-    12%,
-    21% {
-        transform: translateY(-1.15em);
-    }
-
-    24%,
-    33% {
-        transform: translateY(-2.30em);
-    }
-
-    36%,
-    45% {
-        transform: translateY(-3.45em);
-    }
-
-    48%,
-    57% {
-        transform: translateY(-4.60em);
-    }
-
-    60%,
-    69% {
-        transform: translateY(-5.75em);
-    }
-
-    72%,
-    81% {
-        transform: translateY(-6.90em);
-    }
-
-    84%,
-    93% {
-        transform: translateY(-8.05em);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 600px) {
-
-    .hero-services {
-        margin-top: 3rem;
-        font-size: 2rem;
-    }
-
-}
-
-
-
-
-
-/* =========================
-   ABOUT
-   ========================= */
-
-.section p {
-    color: #94a3b8;
-}
-
-.section p + p {
-    margin-top: 20px;
-}
-
-
-/* =========================
-   EXPERIENCE
-   ========================= */
-
-.experience {
-    padding: 25px 0;
-
-    border-left: 2px solid #1e293b;
-    padding-left: 25px;
-}
-
-.experience + .experience {
-    margin-top: 20px;
-}
-
-.date {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #38bdf8;
-    font-size: 14px;
-}
-
-.experience h3,
-.education h3 {
-    font-size: 21px;
-    margin-bottom: 4px;
-}
-
-.experience h4,
-.education h4 {
-    margin-bottom: 12px;
-}
-
-
-/* =========================
-   SKILLS
-   ========================= */
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.skill-group {
-    padding: 25px;
-
-    border: 1px solid #1e293b;
-    border-radius: 8px;
-
-    background: #111c31;
-}
-
-.skill-group h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.skill-group p {
-    color: #94a3b8;
-}
-
-
-/* =========================
-   EDUCATION
-   ========================= */
-
-.education {
-    padding: 25px 0;
-
-    border-bottom: 1px solid #1e293b;
-}
-
-.education:last-child {
-    border-bottom: none;
-}
-
-
-/* =========================
-   CERTIFICATIONS
-   ========================= */
-
-.certifications {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.certifications p {
-    padding: 15px 18px;
-
-    border-left: 2px solid #38bdf8;
-
-    background: #111c31;
-}
-
-
-/* =========================
-   CONTACT
-   ========================= */
-
-.contact {
-    text-align: center;
-}
-
-.contact p {
-    margin-bottom: 20px;
-}
-
-.email {
-    display: inline-block;
-
-    color: #38bdf8;
-    text-decoration: none;
-
-    font-size: 18px;
-}
-
-.email:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   RESPONSIVE >>>
-   ========================= */
-
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 700px) {
-
-    .section {
-        padding: 70px 0;
-    }
-
-    h2 {
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
-
-    .skills {
-        grid-template-columns: 1fr;
-    }
-
-    .certifications {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        letter-spacing: -1px;
-    }
-
-    .description {
-        font-size: 18px;
-    }
-}
-
-
-/* =========================
-   SMALL MOBILE
-   ========================= */
-
-@media (max-width: 450px) {
-
-    .container {
-        width: 88%;
-    }
-
-    .hero {
-        min-height: 90vh;
-    }
-
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .buttons a {
-        width: 200px;
-    }
-
-    .experience {
-        padding-left: 18px;
-    }
-}
-
-
-
-
-/* =========================
-   EXTRA ANIMATIONS
-   ========================= */
-
-
-/* ANIMACION MAILTO */
-.mailto_animation {
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-}
-
-.mailto_animation::before {
-    content: "";
-    background: #094f6b;
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    bottom: 0;
-    left: 0;
-    border-radius: 5px;
-    transform: scaleX(0);
-    animation: mailto-no-hover 1.4s forwards linear;
-    z-index: -1;
-}
-
-.mailto_animation:hover::before,
-.mailto_animation:focus::before {
-    animation: mailto-hover .5s forwards linear;
-}
-
-@keyframes mailto-hover {
-    0% {
-        transform: scaleX(0);
-        height: 5px;
-    }
-
-    45% {
-        transform: scaleX(1.05);
-        height: 5px;
-    }
-
-    55% {
-        height: 5px;
-    }
-
-    100% {
-        transform: scaleX(1.05);
-        height: 2.1rem;
-    }
-}
-
-@keyframes mailto-no-hover {
-    0% {
-        transform: scaleX(1.05);
-        height: 2.1rem;
-    }
-
-    45% {
-        height: 5px;
-    }
-
-    55% {
-        transform: scaleX(1.05);
-        height: 5px;
-        opacity: 1;
-    }
-
-    100% {
-        transform: scaleX(0);
-        height: 5px;
-        opacity: .02;
-    }
-}
-/* FIN ANIMACION MAILTO */
+</html>
