@@ -1225,40 +1225,390 @@ h4 {
 }
 
 
+
+
 /* =========================
    EXPERIENCE
+   RETRO OFFICE / FILE FOLDERS
    ========================= */
 
-.experience {
-    padding: 25px 0;
 
-    border-left: 2px solid #1e293b;
-    padding-left: 25px;
+/* ============================================================
+   CARPETA
+   ============================================================ */
+
+.experience {
+
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 50px;
+
+    padding: 32px 30px 28px;
+
+
+    /*
+       Color de cartón envejecido
+    */
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #ead6a8 0%,
+            #dfc58e 55%,
+            #d4b87e 100%
+        );
+
+
+    /*
+       Borde de la carpeta
+    */
+
+    border: 2px solid #a98a51;
+
+    border-radius:
+        0 8px 8px 8px;
+
+
+    /*
+       Profundidad y volumen
+    */
+
+    box-shadow:
+
+        0 5px 0 #8f7445,
+
+        0 12px 25px
+        rgba(0, 0, 0, 0.25),
+
+        inset 0 1px 2px
+        rgba(255, 255, 255, 0.55);
+
+
+    /*
+       Transición
+    */
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease,
+
+        filter 0.3s ease;
 }
+
+
+/* ============================================================
+   PESTAÑA SUPERIOR
+   ============================================================ */
+
+.experience::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -22px;
+
+    left: -2px;
+
+    width: 155px;
+
+    height: 22px;
+
+
+    /*
+       Cartón de la pestaña
+    */
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #ecd9ae,
+            #dfc58e
+        );
+
+
+    /*
+       Bordes de la pestaña
+    */
+
+    border:
+
+        2px solid
+        #a98a51;
+
+    border-bottom: none;
+
+    border-radius:
+        9px 9px 0 0;
+}
+
+
+/* ============================================================
+   FECHA
+   ============================================================ */
+
+.experience .date {
+
+    position: absolute;
+
+    top: -19px;
+
+    left: 27px;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin: 0;
+
+
+    /*
+       Tipografía de archivo
+    */
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        0.04em;
+
+
+    /*
+       Color de tinta
+    */
+
+    color:
+        #70552d;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   PUESTO
+   ============================================================ */
+
+.experience h3 {
+
+    margin:
+        0 0 9px;
+
+    color:
+        #302719;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        23px;
+
+    font-weight:
+        bold;
+
+    line-height:
+        1.3;
+}
+
+
+/* ============================================================
+   EMPRESA
+   ============================================================ */
+
+.experience h4 {
+
+    margin:
+        0 0 18px;
+
+    color:
+        #806333;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        14px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        0.02em;
+}
+
+
+/* ============================================================
+   DESCRIPCIÓN
+   ============================================================ */
+
+.experience p {
+
+    margin:
+        0;
+
+    color:
+        #51432e;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+
+    max-width:
+        100%;
+}
+
+
+/* ============================================================
+   SEPARACIÓN ENTRE CARPETAS
+   ============================================================ */
 
 .experience + .experience {
-    margin-top: 20px;
+
+    margin-top:
+        38px;
 }
 
-.date {
-    display: block;
 
-    margin-bottom: 8px;
+/* ============================================================
+   HOVER
+   ============================================================ */
 
-    color: #38bdf8;
-    font-size: 14px;
+.experience:hover {
+
+    transform:
+        translateY(-4px);
+
+    filter:
+        brightness(1.04);
+
+    box-shadow:
+
+        0 7px 0 #8f7445,
+
+        0 17px 30px
+        rgba(0, 0, 0, 0.3),
+
+        inset 0 1px 2px
+        rgba(255, 255, 255, 0.6);
 }
 
-.experience h3,
-.education h3 {
-    font-size: 21px;
-    margin-bottom: 4px;
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .experience {
+
+        margin-top:
+            30px;
+
+        padding:
+            26px 19px 22px;
+    }
+
+
+    .experience::before {
+
+        width:
+            130px;
+    }
+
+
+    .experience .date {
+
+        font-size:
+            11px;
+    }
+
+
+    .experience h3 {
+
+        font-size:
+            19px;
+
+        margin-bottom:
+            8px;
+    }
+
+
+    .experience h4 {
+
+        font-size:
+            12px;
+
+        margin-bottom:
+            13px;
+
+        overflow-wrap:
+            anywhere;
+    }
+
+
+    .experience p {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.7;
+    }
+
+
+    .experience + .experience {
+
+        margin-top:
+            34px;
+    }
+
 }
 
-.experience h4,
-.education h4 {
-    margin-bottom: 12px;
+
+/* ============================================================
+   REDUCIR MOVIMIENTO
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .experience {
+
+        transition:
+            none;
+    }
+
 }
+
+
+/*
+
+    FIN EXPERIENCIA
+
+*/
 
 
 /* =========================
